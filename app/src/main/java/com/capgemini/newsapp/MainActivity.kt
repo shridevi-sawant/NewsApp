@@ -28,8 +28,7 @@ class MainActivity : AppCompatActivity() {
                 "in",
                 "7446209d48d143c28dff550ab5b6a2cb"
             )
-            Log.d("MainActivity",
-                "No of articles: ${result.articles.size}")
+
 
             withContext(Dispatchers.Main){
                 rView.adapter = NewsAdapter(result.articles){
@@ -40,6 +39,7 @@ class MainActivity : AppCompatActivity() {
                             Uri.parse(result.articles[it].url)
                         )
                         startActivity(webIntent)
+                        Log.d("MainActivity", "browser opening")
                     }
                 }
             }
