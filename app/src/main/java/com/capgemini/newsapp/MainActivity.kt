@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
                 "in",
                 "7446209d48d143c28dff550ab5b6a2cb"
             )
+            Log.d("MainActivity", "we are on default coroutine")
 
 
             withContext(Dispatchers.Main){
